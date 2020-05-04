@@ -3,6 +3,16 @@ entries:
   job-api:
   - apiVersion: v2
     appVersion: latest
+    created: "2020-05-04T14:08:35.263597348Z"
+    description: A Helm chart for Kubernetes
+    digest: 545e001b495d9fff1ca7fcc31f18ba1b5b0d318234dada343669f10b0fcf1419
+    name: job-api
+    type: application
+    urls:
+    - https://github.com/do-it-platform/helm-charts/releases/download/job-api-0.6.0/job-api-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: latest
     created: "2020-05-04T13:49:56.933499907Z"
     description: A Helm chart for Kubernetes
     digest: 57186cd391ebd815fae68f2542dadbf73579f20607907073adac65a95ee37d76
