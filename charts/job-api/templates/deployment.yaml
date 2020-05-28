@@ -44,6 +44,27 @@ spec:
           envFrom:
             - configMapRef:
                 name: job-api
+        - name: gatekeeper-sidecar
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: keycloak/keycloak-gatekeeper
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http-gatekeeper
+              containerPort: 3000
+              protocol: TCP
+          args:
+            - --discovery-url={{ .Values.keycloak.url }}
+            - --client-id={{ .Values.keycloak.clientId }}
+            - --listen=0.0.0.0:3000
+            - --upstream-url=http://127.0.0.1:8080
+            - --secure-cookie=false
+          env:
+          - name: PROXY_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: job-api-gatekeeper-secret
+                key: client-secret
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

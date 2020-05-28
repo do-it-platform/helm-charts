@@ -35,7 +35,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8080
 
 ingress:
   enabled: false
@@ -43,8 +43,9 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: chart-example.local
-      paths: []
+    - host: job-api.doit.local
+      paths:
+      - /
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -67,3 +68,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+keycloak:
+  url: http://keycloak.local/auth/realms/doit
+  clientId: job-api
