@@ -1,11 +1,11 @@
-# Default values for job-api.
+# Default values for search-api-index.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: docker.pkg.github.com/do-it-platform/job-api/job-api
+  repository: docker.pkg.github.com/do-it-platform/search-api/search-api-index
   pullPolicy: IfNotPresent
 
 imagePullSecrets:
@@ -38,14 +38,13 @@ service:
   port: 8080
 
 ingress:
-  enabled: true
+  enabled: false
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: job-api.doit.local
-      paths:
-      - /
+    - host: chart-example.local
+      paths: []
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
@@ -68,7 +67,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-keycloak:
-  url: http://keycloak.local/auth/realms/doit
-  clientId: job-api
