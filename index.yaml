@@ -84,6 +84,20 @@ entries:
   search-api:
   - apiVersion: v2
     appVersion: latest
+    created: "2020-06-01T12:08:02.947088138Z"
+    dependencies:
+    - name: search-api-index
+      repository: https://do-it-platform.github.io/helm-charts
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 6ef2cc6133e0139cf32fbbd908601b8c3d6d658250ffae15a65907b5cfaabf1b
+    name: search-api
+    type: application
+    urls:
+    - https://github.com/do-it-platform/helm-charts/releases/download/search-api-0.2.0/search-api-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: latest
     created: "2020-06-01T12:06:03.802805002Z"
     description: A Helm chart for Kubernetes
     digest: 4b3b913da5de60bd7b6a351422684314aa32f132e94a22079b163c7942d126bf
