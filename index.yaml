@@ -3,6 +3,16 @@ entries:
   job-api:
   - apiVersion: v2
     appVersion: latest
+    created: "2020-06-01T12:06:03.550026889Z"
+    description: A Helm chart for Kubernetes
+    digest: e306ded2e60e2eccd0caefe4ade0ffee6c553948ccf204c7fe58a5b971f720e9
+    name: job-api
+    type: application
+    urls:
+    - https://github.com/do-it-platform/helm-charts/releases/download/job-api-0.9.0/job-api-0.9.0.tgz
+    version: 0.9.0
+  - apiVersion: v2
+    appVersion: latest
     created: "2020-05-28T11:31:36.177256322Z"
     description: A Helm chart for Kubernetes
     digest: 3929aadfef14e9329c226a308a1ae5d66f79bac228a9586e3407f1289c1497d2
@@ -70,5 +80,27 @@ entries:
     type: application
     urls:
     - https://github.com/do-it-platform/helm-charts/releases/download/job-api-0.1.0/job-api-0.1.0.tgz
+    version: 0.1.0
+  search-api:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2020-06-01T12:06:03.802805002Z"
+    description: A Helm chart for Kubernetes
+    digest: 4b3b913da5de60bd7b6a351422684314aa32f132e94a22079b163c7942d126bf
+    name: search-api
+    type: application
+    urls:
+    - https://github.com/do-it-platform/helm-charts/releases/download/search-api-0.1.0/search-api-0.1.0.tgz
+    version: 0.1.0
+  search-api-index:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2020-06-01T12:06:04.056293222Z"
+    description: A Helm chart for Kubernetes
+    digest: ea20e1538d08ef342b968d8f8fabfbc8e431f67c2fccf037f508498c38523fd2
+    name: search-api-index
+    type: application
+    urls:
+    - https://github.com/do-it-platform/helm-charts/releases/download/search-api-index-0.1.0/search-api-index-0.1.0.tgz
     version: 0.1.0
 generated: "2020-03-24T14:06:54.069531891Z"
